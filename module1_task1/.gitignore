@@ -1,0 +1,3 @@
+dist/
+# 'dist/' is the directory this project is supposed to generate the website in.
+# We don't want it uploaded to GitHub.
