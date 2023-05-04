@@ -9,3 +9,6 @@ apt install golang-go -y
 
 ## Initialize the Golang project with a custom identifier
 go mod init github.com/GABETROLL/awesome-api
+
+# Initialize the mux package
+go mod init "github.com/gorilla/mux"
