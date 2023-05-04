@@ -1,6 +1,8 @@
 build: ## Compile the 'main.go' server into a binary named: 'awesome-api'
-# Initialize the mux package
+# Get the mux package dependency
 	go get github.com/gorilla/mux
+# Initialize the Golang project with a custom identifier
+	go mod init github.com/GABETROLL/awesome-api
 	go build
 run: ## Run the 'awesome-api' server binary, and log all of its output into 'awesome-api.log'
 	./awesome-api >./awesome-api.log 2>&1 &
