@@ -1,8 +1,7 @@
 # Go HTTP Server
 ## Prerequisites
-- Bash (NOT Windows PowerShell)
 - (GNU make)[https://www.gnu.org/software/make/]
-- (Go)[https://gohugo.io/installation/]
+- (Go)[https://go.dev/]
 ### Install them
 ```./setup.sh```
 ## Lifecycle
