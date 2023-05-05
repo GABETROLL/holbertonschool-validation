@@ -21,3 +21,5 @@ Help:
 ```make help```
 Lint ``main.go``:
 ```make lint```
+Run the unit-tests on ``main.go`` using ``main_test.go``:
+```go test -v -short -coverprofile=coverage-units.out```
