@@ -14,7 +14,7 @@ run: ## Run the 'awesome-api' server binary, and log all of its output into 'awe
 stop: ## Kill the server binary process
 	kill "$(pgrep awesome-api)"
 clean: ## Stop the server and removes the binary and log files
-	stop
+	$(MAKE) stop
 	rm awesome-api awesome-api.log
 test: ## Send a GET request to the server link with 'curl' and logs the action and the result in the log file
 	echo "HIT: healtcheck" >> awesome-api.log
