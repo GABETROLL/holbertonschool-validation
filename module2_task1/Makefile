@@ -6,7 +6,7 @@ build: ## Compile the 'main.go' server into a binary named: 'awesome-api'
 # Initialize the Golang project with a custom identifier
 	go mod init github.com/GABETROLL/awesome-api
 # lint the main.go file
-	build
+	$(MAKE) lint
 # compile
 	go build
 run: ## Run the 'awesome-api' server binary, and log all of its output into 'awesome-api.log'
