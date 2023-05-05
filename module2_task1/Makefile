@@ -1,3 +1,5 @@
+PID_FILE := $(BINARY_NAME).pid
+
 lint: ## Use 'golangci-lint run' to lint the 'main.go' file
 	golangci-lint run
 build: ## Compile the 'main.go' server into a binary named: 'awesome-api'
@@ -11,8 +13,9 @@ build: ## Compile the 'main.go' server into a binary named: 'awesome-api'
 	go build
 run: ## Run the 'awesome-api' server binary, and log all of its output into 'awesome-api.log'
 	./awesome-api >./awesome-api.log 2>&1 &
-stop: ## Kill the server binary process
-	kill "$(pgrep awesome-api)"
+stop: ## Kill the server binary process, if it's running, then delete the binary
+	kill `cat $(PID_FILE)` || true
+	rm $(PID_FILE) || true
 clean: ## Stop the server and removes the binary and log files
 	$(MAKE) stop
 	rm awesome-api awesome-api.log
