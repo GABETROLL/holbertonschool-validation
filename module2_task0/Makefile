@@ -1,7 +1,7 @@
 PID_FILE := $(BINARY_NAME).pid
 
 lint: ## Use 'golangci-lint run' to lint the 'main.go' file
-	golangci-lint run
+	GOOS=linux GOARCH=x86_64 golangci-lint run
 build: ## Compile the 'main.go' server into a binary named: 'awesome-api'
 # Get the mux package dependency
 	go get github.com/gorilla/mux
