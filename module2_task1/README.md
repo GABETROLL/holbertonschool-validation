@@ -5,7 +5,8 @@
 ### Install them
 ```./setup.sh```
 ## Lifecycle
-Compile the server code (``main.go``) into the server binary (``awesome-api``):
+Compile the server code (``main.go``) into the server binary (``awesome-api``)
+(BUT ONLY IF ``make lint`` SUCCEEDS):
 ```make build```
 Run the server (``awesome-api``) and log everything it outputs to ``awesome-api.log``
 (IN THE BACKGROUND):
@@ -18,3 +19,5 @@ Test the server:
 ```make test```
 Help:
 ```make help```
+Lint ``main.go``:
+```make lint```
