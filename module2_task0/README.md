@@ -5,9 +5,16 @@
 ### Install them
 ```./setup.sh```
 ## Lifecycle
-Make website in ```dist```:
+Compile the server code (``main.go``) into the server binary (``awesome-api``):
 ```make build```
-Get rid of ```dist```:
+Run the server (``awesome-api``) and log everything it outputs to ``awesome-api.log``
+(IN THE BACKGROUND):
+```make run```
+Stop the server:
+```make stop```
+Stop the server, and delete the log file (``awesome-api``) and the Go compiler's output files:
 ```make clean```
-Add new post the for website:
-```make POST_NAME=filename.md POST_TITLE="This is the title" post```
+Test the server:
+```make test```
+Help:
+```make help```
