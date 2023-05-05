@@ -13,7 +13,8 @@ clean: ## Stop the server and removes the binary and log files
 	rm awesome-api awesome-api.log
 test: ## Send a GET request to the server link with 'curl' and logs the action and the result in the log file
 	echo "HIT: healtcheck" >> awesome-api.log
-	curl http://localhost:9999/health >> awesome-api.log
+	@test "$(curl http://localhost:9999/health)" = "ALIVE" \
+		|| exit 1;
 help: ## Show this help usage
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 # prints all of these targets and their comments (except this one)
