@@ -1,7 +1,8 @@
 name: module3_task0
 jobs:
-  lint_build_and_test:
-    - run: make help
+  lint-build-and-test:
+    steps:
+      - run: make help
 on:
   push:
     branches:
