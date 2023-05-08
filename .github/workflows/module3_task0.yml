@@ -1,0 +1,11 @@
+name: module3_task0
+jobs:
+  lint_build_and_test:
+    - run: make help
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '00 3,15 * * *'
+    # 3PM every day, this workflow will run
